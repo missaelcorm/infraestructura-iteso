@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  proxy:
+    image: nginx:1.25 # this will use the latest version of 1.25
+    ports:
+      - '8080:80' # expose 8000 on host and sent to 80 in container
+    volumes:
+      - ./nginx.config:/etc/nginx/conf.d/default.conf:ro  #ro = read-only
+  web:
+    image: httpd:2.4  # this will use the latest apache v2
