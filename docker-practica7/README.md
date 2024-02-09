@@ -1,50 +1,27 @@
-# CRUD Todo App
+# Esta es una aplicacion "Todo App"
 
-This is a simple CRUD (Create, Read, Update, Delete) todo application built with React, Express.js, MySQL, and Redis. The application allows to add todo items by performing basic CRUD operations.
+Es un CRUD muy sencillo hecho con React, Express.js, Mariadb, and Redis.
 
-## Technologies Used
+## Tenologias usadas
 
 - React: A JavaScript library for building user interfaces.
 - Express.js: A web application framework for Node.js.
-- MySQL: A popular relational database management system.
+- MariaDb: A popular relational database management system.
 - Redis: An in-memory data store used for caching.
 - Ngnix: Proxy
 - Docker: A containerization platform for easy deployment and scalability.
 
-## Features
-
-- Create a new todo item.
-- Read and display a list of todo items.
-- Update an existing todo item.
-- Delete a todo item.
-- Caching with Redis for improved performance.
-
-## Getting Started
+## Para empezar
 
 ### Prerequisites
 
 - Docker: Install Docker on your machine (https://www.docker.com/get-started).
 - Node.js: Make sure that your machine contains Node.js. About Node.js (https://nodejs.org)
 
-### Installation
+### Instalacion
 
-2. Navigate to the project directory:
-
-3. make. env file and copy variables from .env.example. After that update variable values.
-
-4. Expected: Create, build and run the Docker containers (not-included):
-   `docker-compose up --build`
-
-5. Expected: Access the endpoints from.
-   Here are the lists of endpoints
-    - `GET - http://localhost:5001/api/v1/todos (get all todos)`
-    - `POST - http://localhost:5001/api/v1/todo (create new item) (url encoded)`
-    - `DELETE - http://localhost:5001/api/v1/todo/:id (delete item)`
-    - `PUT - http://localhost:5001/api/v1/todo/:id (update item) (url encoded)`
-    - `GET - http://localhost:5001/api/v1/todo/:id (get single todo item)`
-
-- Expected: Frontend application will be accessible by `http://localhost:8080`
-
+2. Las instrucciones las proporciona el maestro (vease canvas).
+   
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
