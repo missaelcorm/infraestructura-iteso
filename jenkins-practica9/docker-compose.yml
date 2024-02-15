@@ -20,9 +20,6 @@ services:
     working_dir: /app
     ports:
       - 5001:5001
-    volumes:
-      - ./api-server:/app
-      - /app/node_modules
     networks:
       - app_network
 #--------Redis -----
