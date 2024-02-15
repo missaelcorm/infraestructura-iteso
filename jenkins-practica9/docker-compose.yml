@@ -45,8 +45,8 @@ services:
       MYSQL_PASSWORD: "${DB_PASSWORD}"
     command: --init-file init_scripts/init_db.sql
     volumes:
-      - init_scripts:/data/application
       - db_data:/var/lib/mysql
+      - init_scripts:/init_scripts
     networks:
       - app_network
 #-------------
