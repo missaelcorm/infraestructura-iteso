@@ -15,7 +15,7 @@ pipeline {
 
             stage('Build') {
                 steps {
-                    sh 'docker compose up -d -f ./jenkins-practica9/docker-compose.yml'
+                    sh 'docker-compose up -d -f ./jenkins-practica9/docker-compose.yml'
                 }
             }
         }
