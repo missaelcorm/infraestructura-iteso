@@ -1,13 +1,13 @@
 pipeline {
     agent any
         stages {
-            stage ('One') {
+            stage ('Greeting') {
                 steps {
                     echo 'We are starting this build !!'
                 }
             }
 
-            stage ('Two'){
+            stage ('Confirmation'){
                 steps {
                     input('Do you want to proceed?')
                 }
