@@ -43,7 +43,7 @@ services:
       MYSQL_ROOT_HOST: "%"
       MYSQL_USER: "${DB_USER}"
       MYSQL_PASSWORD: "${DB_PASSWORD}"
-    command: --init-file /data/application/init_db.sql
+    command: --init-file init_scripts/init_db.sql
     volumes:
       - init_scripts:/data/application
       - db_data:/var/lib/mysql
