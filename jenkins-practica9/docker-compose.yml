@@ -70,8 +70,8 @@ services:
       - ./client:/app
     command: npm start
     environment:
-      - NODE_ENV = development
-      - WATCHPACK_POLLING = true
+      - NODE_ENV=development
+      - WATCHPACK_POLLING=true
     networks:
       - app_network
       - web_network
