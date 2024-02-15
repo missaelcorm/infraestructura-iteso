@@ -52,20 +52,6 @@ services:
       - db_data:/var/lib/mysql
     networks:
       - app_network
-#--------CLIENT -----
-  client:
-    build:
-      context: ./client
-    volumes:
-      - ./client:/app
-    command: npm start
-    environment:
-      - NODE_ENV=development
-      - WATCHPACK_POLLING=true
-    ports:
-      - 3030:3000
-    networks:
-      - app_network
 #-------------
 volumes:
   db_data:
