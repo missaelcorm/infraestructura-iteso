@@ -47,7 +47,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql
       - init_scripts:/init_scripts
-      - init_scripts/init_db.sql:/data/application/init_db.sql
+      - init_scripts:/data/application
     networks:
       - app_network
 #-------------
