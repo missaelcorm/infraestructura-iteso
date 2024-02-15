@@ -45,7 +45,7 @@ services:
       MYSQL_PASSWORD: "${DB_PASSWORD}"
     command: --init-file /data/application/init_db.sql
     volumes:
-      - ./db/init_db.sql:/data/application/init_db.sql
+      - init_scripts:/data/application
       - db_data:/var/lib/mysql
     networks:
       - app_network
@@ -53,6 +53,7 @@ services:
 volumes:
   db_data:
   redis_data:
+  init_scripts:
 networks:
   app_network:
     driver: bridge
