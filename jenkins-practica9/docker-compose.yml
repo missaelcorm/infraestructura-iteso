@@ -44,11 +44,10 @@ services:
       MYSQL_USER: "${DB_USER}"
       MYSQL_PASSWORD: "${DB_PASSWORD}"
     command: --init-file /init_scripts/init_db.sql
-    sysctls:
-      - net.ipv4.ip_unprivileged_port_start=0
     volumes:
       - db_data:/var/lib/mysql
       - init_scripts:/init_scripts
+      - init_scripts/init_db.sql:/data/application/init_db.sql
     networks:
       - app_network
 #-------------
