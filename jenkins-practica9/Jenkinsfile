@@ -15,6 +15,9 @@ pipeline {
 
             stage('Build') {
                 steps {
+                    dir("jenkins-practica9") {
+                        sh "pwd"
+                    }
                     sh 'docker compose up --build'
                 }
             }
