@@ -26,7 +26,7 @@ services:
       - REDIS_HOST=${REDIS_HOST}
       - REDIS_PORT=${REDIS_PORT}
       - DATABASE_URL=${DATABASE_URL}
-      - CHOKIDAR_USEPOLLING=true
+      - CHOKIDAR_USEPOLLING="true"
     working_dir: /app
     ports:
       - 5001:5001
@@ -70,8 +70,8 @@ services:
       - ./client:/app
     command: npm start
     environment:
-      NODE_ENV: development
-      WATCHPACK_POLLING: true
+      - NODE_ENV = development
+      - WATCHPACK_POLLING = true
     networks:
       - app_network
       - web_network
