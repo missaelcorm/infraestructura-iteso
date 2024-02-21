@@ -15,7 +15,7 @@ pipeline {
 
             stage('Build') {
                 steps {
-                    dir("jenkins-practica9") {
+                    dir("docker-practica7") {
                         sh "pwd"
                         sh 'docker-compose up -d --build'
                     }
