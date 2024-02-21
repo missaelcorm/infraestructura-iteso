@@ -16,7 +16,7 @@ pipeline {
             stage('Static Code Analysis') {
                 steps {
                     dir("docker-practica7") {
-                        withSonarQubeEnv('SonarQube') {
+                        withSonarQubeEnv('sonarqube') {
                             sh 'mvn clean package sonar:sonar'
                             echo 'SonarQube analysis done!'
                         }
