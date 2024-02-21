@@ -16,9 +16,9 @@ pipeline {
             stage('Static Code Analysis') {
                 steps {
                     dir("docker-practica7") {
+                        def scannerHome = tool 'SonarScanner 4.0';
                         withSonarQubeEnv('sonarqube') {
-                            sh 'mvn clean package sonar:sonar'
-                            echo 'SonarQube analysis done!'
+                            sh "${scannerHome}/bin/sonar-scanner"
                         }
                     }
                 }
