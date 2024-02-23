@@ -15,7 +15,7 @@ pipeline {
 
             stage('Static Code Analysis') {
                 steps {
-                    dir("docker-practica7") {
+                    script {
                         def scannerHome = tool 'SonarScanner';
                         withSonarQubeEnv('sonarqube') {
                             sh "${scannerHome}/bin/sonar-scanner"
