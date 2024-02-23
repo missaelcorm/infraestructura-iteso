@@ -5,9 +5,9 @@ services:
     build:
       context: client
       dockerfile: Dockerfile
-    volumes:
-      - ./client:/app
-      - /app/node_modules
+    # volumes:
+    #   - ./client:/app
+    #   - /app/node_modules
     ports:
       - '3000:3000'
     networks:
@@ -24,9 +24,9 @@ services:
       - app_network
     ports:
       - '5001:5001'
-    volumes:
-      - ./api-server:/app
-      - /app/node_modules
+    # volumes:
+    #   - ./api-server:/app
+    #   - /app/node_modules
     environment:
       - DB_HOST=${DB_HOST}
       - DB_PORT=${DB_PORT}
